@@ -13,6 +13,8 @@ $primary-color:#2A3E3B;
 }
 body{
     height: 100vh;
+    margin:50px auto;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,17 +22,42 @@ body{
 }
 .container{
     width: 100%;
-    padding: 0 20px;
+    margin-top: 150px;
+    padding: 50px 0;
     background-color: $containerBg-color;
     display: grid;
-    gap: 20px;
+    gap: 10px;
     grid-template-columns: 1fr;
     place-items: center;
 
 }
 
+.right{
+    display: grid;
+    place-items: center;
+    gap:10px;
+}
+
+.primary-btn{
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border:1px solid $bg-color;
+    color:#fff;
+    background-color: $bg-color;
+    box-shadow: 0 2px 2px $bg-color;
+
+}
+.secondary-btn{
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border:1px solid $bg-color;
+    color:$bg-color;
+    background-color: #fff;
+
+}
 .card{
-    width: 300px;
     padding: 20px;
     border-radius: 5px;
     display: flex;
@@ -46,13 +73,15 @@ body{
             font-size: 24px;
             font-weight: 600;
             text-align: center;
-            margin: 20px 0;
+            margin-top: 30px;
+            margin-bottom: 0 ;
             color: $primary-color;
             text-transform: capitalize;
         }
 
         &__body{
             width: 100%;
+            margin: 30px 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -97,22 +126,22 @@ body{
                         }
                     }
                 }
-                .primary-btn{
-                    cursor: pointer;
-                    padding: 5px 20px;
-                    border-radius: 5px;
-                    border:1px solid $bg-color;
 
-                }
             }
 
         }
 
 }
 
+
+.card__one{
+    width: 300px;
+    height: 450px;
+}
+
 .card__two{
+    width: 280px;
     height: 120px;
-    margin: 30px 0;
 
     h2{
         margin-bottom: 0;
@@ -135,8 +164,25 @@ body{
         }
     }
 
-    .card__three{
-        width: 70%;
+
+}
+.card__three{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h2{
+        margin: 10px 0;
+    }
+     p{
+         margin-bottom: 20px;
+     }
+
+    button{
+        margin-bottom: 10px;
+        padding: 5px 15px;
     }
 }
 
@@ -147,7 +193,9 @@ body{
         width: 1000px;
         max-width: 100%;
         height: 800px;
+        margin-top: 0;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
 
