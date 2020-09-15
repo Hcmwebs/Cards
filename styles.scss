@@ -1,0 +1,148 @@
+@import 'config' ;
+@import 'utilities';
+@import 'buttons';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+body{
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$bg-color;
+}
+
+.right{
+    display: grid;
+    align-items: start;
+    gap:20px;
+}
+
+.card{
+    @include flexSpaceBetween;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $cardBg-color;
+    transition: all 0.60s ease-in-out;
+
+    &:hover{
+        box-shadow: 0 4px 4px 4px $primary-color;
+        transform:scale(1.05);
+    }
+
+    h1{
+
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 0 ;
+        color: $primary-color;
+        text-transform: capitalize;
+    }
+
+    &__body{
+        @include flexSpaceBetween;
+        flex-direction: column;
+        width: 100%;
+        margin: 30px 0;
+
+
+        &--item{
+            @include flexSpaceBetween;
+            width: 100%;
+            margin: 10px 0;
+
+            .profile{
+                @include flexSpaceBetween;
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    display: block;
+                    margin-right: 10px;
+                }
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+
+                    h3{
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+
+
+                    small{
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: $bg-color;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+.card__one{
+    width: 340px;
+    height: 450px;
+}
+
+.card__two{
+    width: 300px;
+    height: 120px;
+
+    h2{
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    .card__text{
+
+        @include flexSpaceBetween;
+        width: 100%;
+
+        p{
+            font-size:12px;
+        }
+
+    }
+
+
+}
+.card__three{
+    @include flexSpaceBetween;
+    flex-direction: column;
+    width: 280px;
+
+    h2{
+        margin: 10px 0;
+    }
+
+    p{
+         margin-bottom: 20px;
+     }
+
+    button{
+        margin-bottom: 10px;
+    }
+}
+
+@import 'medias'

@@ -1,0 +1,27 @@
+
+%btn{
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border:1px solid $bg-color;
+  box-shadow: 0 2px 2px $bg-color;
+  transition: all 0.6s ease-in-out;
+
+
+  &:hover{
+    transform: scale(0.98);
+  }
+}
+
+.primary-btn{
+  @extend %btn;
+  color:#fff;
+  background-color: $bg-color;
+}
+
+.secondary-btn{
+  @extend %btn;
+  color:$bg-color;
+  background-color: #fff;
+
+}
