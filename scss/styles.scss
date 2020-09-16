@@ -18,6 +18,10 @@ body{
     background-color:$bg-color;
 }
 
+p{
+    font-size:14px;
+}
+
 .right{
     display: grid;
     align-items: start;
@@ -119,9 +123,6 @@ body{
         @include flexSpaceBetween;
         width: 100%;
 
-        p{
-            font-size:12px;
-        }
 
     }
 
@@ -137,7 +138,6 @@ body{
     }
 
     p{
-        font-size: 12px;
          margin-bottom: 20px;
 
      }
